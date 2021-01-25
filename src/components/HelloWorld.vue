@@ -10,7 +10,7 @@
           생일 그 이상의 생일.
         </h2>
         <v-col class="mb-4">
-        <p class="subheading font-weight-regular">
+        <p class="grey--text subheading font-weight-regular">
           가격은 걱정 없이,
           <br>마음은 그대로
         </p>
@@ -45,15 +45,13 @@
           </p>
           </v-col>
           <v-row justify="center" class="mb-5">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-          >
-            체험하기
-          </a>
-        </v-row>
+            <a
+              href="/about"
+              class="mx-3 font-weight-bold"
+            >
+              체험하기 >
+            </a>
+          </v-row>
           <v-row justify="center">
           <v-img
           max-width="1000"
@@ -73,14 +71,20 @@
         <v-col
           cols="12"
         >
-          <h2 class="display-1 font-weight-bold mb-3">
+          <h1 class="display-2 font-weight-bold mb-3">
             GIFT
-          </h2>
-          <h1 class="display-2 font-weight-bold mb-3">사랑하는 사람에게
-            <br>선물을.
           </h1>
-          <v-col class="mb-4">
-          </v-col>
+          <h2 class="display-1 font-weight-bold mb-3">사랑하는 사람에게
+            <br>선물을.
+          </h2>
+          <v-row justify="center" class="mt-5">
+            <a
+              href="/about"
+              class="mx-3 font-weight-bold"
+            >
+              바로가기 >
+            </a>
+          </v-row>
           <v-row justify="center" class="mb-5">
           <a
             v-for="(eco, i) in ecosystem"
@@ -106,8 +110,8 @@
     <v-sheet
       class="d-flex"
       color="rgb(0,0,0)"
-      height="1000">
-      <v-row justify="center" class="text-center mt-10">
+      >
+      <v-row justify="center" class="text-center mt-10 mb-12">
         <v-col
           cols="12"
         >
@@ -115,16 +119,14 @@
           <h2 class="white--text display-1 font-weight-bold mb-3">
             손편지의 감동을 웹에서.
           </h2>
-          <v-row justify="center" class="mb-5">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-          >
-            체험하기
-          </a>
-        </v-row>
+          <v-row justify="center" class="mt-5 mb-5">
+            <a
+              href="/about"
+              class="mx-3 font-weight-bold"
+            >
+              더 알아보기 >
+            </a>
+          </v-row>
           <v-row justify="center">
           <v-img
           max-width="1000"
@@ -165,11 +167,6 @@
 export default {
 
   data: () => ({
-    ecosystem: [
-      {
-        text: 'vuetify-loader',
-        href: '/about'
-      }]
   })
 }
 </script>
