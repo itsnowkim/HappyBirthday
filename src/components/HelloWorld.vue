@@ -77,7 +77,7 @@
           <h2 class="display-1 font-weight-bold mb-3">사랑하는 사람에게
             <br>선물을.
           </h2>
-          <v-row justify="center" class="mt-5">
+          <v-row justify="center" class="mt-5 mb-5">
             <a
               href="/gift"
               class="mx-3 font-weight-bold"
@@ -85,16 +85,6 @@
               바로가기 >
             </a>
           </v-row>
-          <v-row justify="center" class="mb-5">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-          >
-            바로가기
-          </a>
-        </v-row>
           <v-row justify="center">
           <v-img
           max-width="1000"
