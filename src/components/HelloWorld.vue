@@ -46,7 +46,7 @@
           </v-col>
           <v-row justify="center" class="mb-5">
             <a
-              href="/about"
+              href="/photo"
               class="mx-3 font-weight-bold"
             >
               체험하기 >
@@ -79,7 +79,7 @@
           </h2>
           <v-row justify="center" class="mt-5">
             <a
-              href="/about"
+              href="/gift"
               class="mx-3 font-weight-bold"
             >
               바로가기 >
@@ -121,7 +121,7 @@
           </h2>
           <v-row justify="center" class="mt-5 mb-5">
             <a
-              href="/about"
+              href="/letter"
               class="mx-3 font-weight-bold"
             >
               더 알아보기 >
@@ -140,28 +140,6 @@
     <!--4번째 블럭-->
   </div>
 </template>
-<!--
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
--->
 
 <script>
 export default {

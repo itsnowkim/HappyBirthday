@@ -10,10 +10,10 @@
     </v-btn>
 
     <v-row align="center" justify="space-around">
-      <v-btn text to="/about">Photo</v-btn>
-      <v-btn text>Gift</v-btn>
-      <v-btn text>Letter</v-btn>
-      <v-btn text>Learn more</v-btn>
+      <v-btn text to="/photo">Photo</v-btn>
+      <v-btn text to="/gift">Gift</v-btn>
+      <v-btn text to="/letter">Letter</v-btn>
+      <v-btn text to="/learnmore">Learn more</v-btn>
     </v-row>
 
     </v-app-bar>
