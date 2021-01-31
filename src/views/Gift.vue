@@ -1,13 +1,18 @@
 <!-- Vue Component -->
-
 <template>
   <div>
-      <v-card v-if="height == 0">
-          I'm mobile
-      </v-card>
-      <v-card v-else>
-          I'm desktop
-      </v-card>
+    <v-sheet>
+      <v-container fluid grid-list-md>
+        <v-layout row wrap>
+          <v-flex xs12 sm6 md4 lg3 xl2>
+            <v-card>first</v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4 lg3 xl2>
+            <v-card>second</v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-sheet>
   </div>
 </template>
 

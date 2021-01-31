@@ -1,15 +1,15 @@
 <template>
   <v-container>
     <!--1번째 블럭-->
-    <v-layout>
-      <v-flex align="center" justify="center" class="text-center">
-          <v-card xs6 sm6 md4 lg2>
+    <v-sheet>
+      <v-row align="center" justify="center" class="text-center mt-10">
+          <v-col xs6 sm6 md4 lg2>
             <v-sheet color="white" class="mt-12">
               <h1 class="display-2 font-weight-bold mb-3">광장동에서</h1>
               <h3 class="headline font-weight-bold mb-3">20.03.03</h3>
             </v-sheet>
-          </v-card>
-          <v-card xs6 sm6 md4 lg2>
+          </v-col>
+          <v-col xs6 sm6 md4 lg2>
           <v-carousel
             cycle
             height="400"
@@ -36,9 +36,9 @@
               </v-sheet>
             </v-carousel-item>
           </v-carousel>
-          </v-card>
-      </v-flex>
-    </v-layout>
+          </v-col>
+      </v-row>
+    </v-sheet>
   <!--1번째 블럭-->
   </v-container>
 </template>
