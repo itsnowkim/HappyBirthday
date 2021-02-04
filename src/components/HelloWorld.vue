@@ -19,6 +19,7 @@
     </v-row>
     <v-row justify="center" class="mb-10">
         <v-img
+          class="rounded-xl"
           max-width="1000"
           max-height="588"
           src="../assets/birthdaycake.jpg"
@@ -54,6 +55,7 @@
           </v-row>
           <v-row justify="center">
           <v-img
+          class="rounded-xl"
           max-width="1000"
           max-height="1000"
           src="../assets/photo.png"
@@ -87,6 +89,7 @@
           </v-row>
           <v-row justify="center">
           <v-img
+          class="rounded-xl"
           max-width="1000"
           max-height="1000"
           src="../assets/present.jpg"
@@ -119,6 +122,7 @@
           </v-row>
           <v-row justify="center">
           <v-img
+          class="rounded-xl"
           max-width="1000"
           max-height="1000"
           src="../assets/hbd.png"
