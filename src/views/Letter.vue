@@ -1,9 +1,8 @@
 <template>
     <v-container>
-        <div class="text-center">
+        <div class="text-center"><br><br><br>
             <h1>401 not authorized!</h1>
             <h2>If you want to see the contents, Please Log in</h2><br><br><br>
-            <v-btn @click="login">Login</v-btn><br>
 
             <v-dialog v-model="dialog">
               <template v-slot:activator="{ on, attrs }">
@@ -19,8 +18,9 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn text @click="dialog = false">Close</v-btn>
-                  <v-btn text @click="login">Save</v-btn>
+                  <v-btn text @click="dialog = false" color="red">Close</v-btn>
+                  <v-btn text @click="login" color="blue">Login</v-btn>
+                  <v-btn text @click="signup" color="green">Signup</v-btn>
                 </v-card-actions>
               </v-card>
             </v-dialog>
@@ -47,6 +47,10 @@ export default {
       const user = { email: this.email, password: this.password }
       console.log(user)
       // axios.post('http://localhost:5000/login', user)
+    },
+    signup () {
+      this.dialog = false
+      this.$router.push('/signup')
     }
   }
 }
