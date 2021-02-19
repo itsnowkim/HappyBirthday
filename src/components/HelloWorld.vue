@@ -65,40 +65,6 @@
     </v-row>
     </v-sheet>
     <!--2번째 블럭-->
-    <!--3번째 블럭-->
-    <v-sheet
-      class="d-flex"
-      >
-      <v-row justify="center" class="text-center mt-10 mb-12">
-        <v-col
-          cols="12"
-        >
-          <h1 class="display-2 font-weight-bold mb-3">
-            GIFT
-          </h1>
-          <h2 class="display-1 font-weight-bold mb-3">사랑하는 사람에게
-            <br>선물을.
-          </h2>
-          <v-row justify="center" class="mt-5 mb-5">
-            <a
-              href="/gift"
-              class="mx-3 font-weight-bold"
-            >
-              바로가기 >
-            </a>
-          </v-row>
-          <v-row justify="center">
-          <v-img
-          class="rounded-xl"
-          max-width="1000"
-          max-height="1000"
-          src="../assets/present.jpg"
-          aspect-ratio="1.7"
-        ></v-img></v-row>
-        </v-col>
-    </v-row>
-    </v-sheet>
-    <!--3번째 블럭-->
     <!--4번째 블럭-->
     <v-sheet
       class="d-flex"

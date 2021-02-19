@@ -13,9 +13,6 @@
             <v-list-item to="/photo">
               <v-list-item-title>PHOTO</v-list-item-title>
             </v-list-item>
-            <v-list-item to="/gift">
-              <v-list-item-title>GIFT</v-list-item-title>
-            </v-list-item>
             <v-list-item to="/letter">
               <v-list-item-title>LETTER</v-list-item-title>
             </v-list-item>
@@ -31,7 +28,6 @@
     <v-row no-gutters align="center" justify="space-around">
       <v-btn icon to="/"><v-icon>mdi-cake</v-icon></v-btn>
       <v-btn text to="/photo">Photo</v-btn>
-      <v-btn text to="/gift">Gift</v-btn>
       <v-btn text to="/letter">Letter</v-btn>
       <v-btn text to="/learnmore">Learn more</v-btn>
     </v-row>
@@ -53,8 +49,8 @@
       >
         <v-card-text>
           <v-btn
-            v-for="icon in icons"
-            :key="icon"
+            v-for="(icon, idx) in icons"
+            :key="idx"
             class="mx-4"
             icon
           >
