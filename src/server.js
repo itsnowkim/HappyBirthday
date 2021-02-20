@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const User = require('./models/User')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 const app = express()
 app.use(bodyParser.json())
@@ -56,3 +57,53 @@ app.post('/signup', (req, res) => {
 })
 
 // login method
+app.post('/login', (req, res) => {
+  User.findOne({ email: req.body.email }, (err, user) => {
+    if (err) {
+      return res.status(500).json({
+        title: 'server error',
+        error: 'err'
+      })
+    }
+    if (!user) { // email not matched
+      return res.status(401).json({
+        title: 'user not found',
+        error: '일치하는 email이 없습니다'
+      })
+    }
+    if (!bcrypt.compareSync(req.body.password, user.password)) {
+      return res.status(401).json({
+        title: 'login failed',
+        error: '비밀번호가 일치하지 않습니다.'
+      })
+    }
+    // 올바른 경우
+    const token = jwt.sign({ userId: user._id }, 'secret')
+    return res.status(200).json({
+      title: 'login success',
+      token: token
+    })
+  })
+})
+
+// grab user
+app.get('/user', (req, res) => {
+  const token = req.headers.token // token
+  jwt.verify(token, 'secret', (err, decoded) => {
+    if (err) {
+      return res.status(401).json({
+        title: 'unauthorized'
+      })
+    }
+    User.findOne({ _id: decoded.userId }, (err, user) => {
+      if (err) return console.log(err)
+      return res.status(200).json({
+        title: 'user grabbed',
+        user: {
+          email: user.email,
+          name: user.name
+        }
+      })
+    })
+  })
+})
