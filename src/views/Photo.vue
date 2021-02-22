@@ -4,76 +4,52 @@
     <!--1번째 블럭-->
     <v-sheet>
       <v-container fluid grid-list-md>
-        <v-row class="ma-12">
-        <v-layout align-center justify-center class="text-center">
-          <v-sheet color="white" class="mt-12">
-              <h1 class="display-2 font-weight-bold mb-3">광장동에서</h1>
-              <h3 class="headline font-weight-bold mb-3">20.03.03</h3>
-              <p>{{letter}}</p>
-          </v-sheet>
-        </v-layout>
-        <v-layout>
-            <v-carousel cycle height="400px" hide-delimiter-background show-arrows-on-hover>
-              <v-carousel-item
-                v-for="(slide, i) in slides"
-                :key="i"
-              >
-                <v-sheet
-                  :color="colors[i]"
-                  height="100%"
-                >
-                  <v-row
-                    class="fill-height"
-                    align="center"
-                    justify="center"
-                  >
-                    <div class="display-3">
-                      {{ slide }} Slide
-                    </div>
-                  </v-row>
-                </v-sheet>
-              </v-carousel-item>
-            </v-carousel>
-        </v-layout>
-      </v-row>
+        <v-row class="ma-12" align="center">
+          <v-col cols="6">
+            <v-layout justify-center class="text-center">
+              <v-sheet color="white" class="mt-12">
+                  <h1 class="display-2 font-weight-bold mb-3">광장동에서</h1>
+                  <h3 class="headline font-weight-bold mb-3">20.03.03</h3>
+                  <p>{{letter}}</p>
+              </v-sheet>
+            </v-layout>
+          </v-col>
+          <v-col cols="6">
+            <v-layout>
+                <v-carousel cycle height="auto" hide-delimiters>
+                  <v-carousel-item v-for="(item, i) in items" :key="i">
+                    <v-img :src="item.src" contain height="400" ></v-img>
+                  </v-carousel-item>
+                </v-carousel>
+            </v-layout>
+          </v-col>
+        </v-row>
       </v-container>
     </v-sheet>
     <!--1번째 블럭-->
     <!--2번째 블럭-->
     <v-sheet color="#f2f2f2">
       <v-container fluid grid-list-md>
-        <v-row class="ma-12">
-        <v-layout>
-            <v-carousel cycle height="400px" hide-delimiter-background show-arrows-on-hover>
-              <v-carousel-item
-                v-for="(slide, i) in slides"
-                :key="i"
-              >
-                <v-sheet
-                  :color="colors[i]"
-                  height="100%"
-                >
-                  <v-row
-                    class="fill-height"
-                    align="center"
-                    justify="center"
-                  >
-                    <div class="display-3">
-                      {{ slide }} Slide
-                    </div>
-                  </v-row>
-                </v-sheet>
-              </v-carousel-item>
-            </v-carousel>
-        </v-layout>
-        <v-layout align-center justify-center class="text-center">
-          <v-sheet color="#f2f2f2" class="mt-12">
-              <h1 class="display-2 font-weight-bold mb-3">광장동에서</h1>
-              <h3 class="headline font-weight-bold mb-3">20.03.03</h3>
-              <p>{{letter}}</p>
-          </v-sheet>
-        </v-layout>
-      </v-row>
+        <v-row class="ma-12" align="center">
+          <v-col cols="6">
+            <v-layout>
+                <v-carousel cycle height="auto" hide-delimiters>
+                  <v-carousel-item v-for="(item, i) in items" :key="i">
+                    <v-img :src="item.src" contain height="400" ></v-img>
+                  </v-carousel-item>
+                </v-carousel>
+            </v-layout>
+          </v-col>
+          <v-col cols="6">
+            <v-layout justify-center class="text-center">
+              <v-sheet color="#f2f2f2" class="mt-12">
+                  <h1 class="display-2 font-weight-bold mb-3">광장동에서</h1>
+                  <h3 class="headline font-weight-bold mb-3">20.03.03</h3>
+                  <p>{{letter}}</p>
+              </v-sheet>
+            </v-layout>
+          </v-col>
+        </v-row>
       </v-container>
     </v-sheet>
     <!--2번째 블럭-->
@@ -84,19 +60,11 @@
 export default {
   data () {
     return {
-      colors: [
-        'indigo',
-        'warning',
-        'pink darken-2',
-        'red lighten-1',
-        'deep-purple accent-4'
-      ],
-      slides: [
-        'First',
-        'Second',
-        'Third',
-        'Fourth',
-        'Fifth'
+      items: [
+        { src: require('@/assets/birthdaycake.jpg') },
+        { src: require('@/assets/hbd.png') },
+        { src: require('@/assets/present.jpg') },
+        { src: require('@/assets/presento.png') }
       ],
       // eslint-disable-next-line quotes
       letter: `aesrf
