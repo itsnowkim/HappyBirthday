@@ -5,7 +5,7 @@
     <v-sheet>
       <v-container fluid grid-list-md>
         <v-row class="ma-12" align="center">
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <v-layout justify-center class="text-center">
               <v-sheet color="white" class="mt-12">
                   <h1 class="display-2 font-weight-bold mb-3">광장동에서</h1>
@@ -14,7 +14,7 @@
               </v-sheet>
             </v-layout>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <v-layout>
                 <v-carousel cycle height="auto" hide-delimiters>
                   <v-carousel-item v-for="(item, i) in items" :key="i">
@@ -31,7 +31,7 @@
     <v-sheet color="#f2f2f2">
       <v-container fluid grid-list-md>
         <v-row class="ma-12" align="center">
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <v-layout>
                 <v-carousel cycle height="auto" hide-delimiters>
                   <v-carousel-item v-for="(item, i) in items" :key="i">
@@ -40,7 +40,7 @@
                 </v-carousel>
             </v-layout>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="12" sm="6">
             <v-layout justify-center class="text-center">
               <v-sheet color="#f2f2f2" class="mt-12">
                   <h1 class="display-2 font-weight-bold mb-3">광장동에서</h1>
