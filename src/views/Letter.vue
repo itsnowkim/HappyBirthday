@@ -51,7 +51,7 @@ export default {
             localStorage.setItem('token', res.data.token)
             this.error = ''
             this.dialog = false
-            this.$router.push('/letter')
+            this.$router.push('/letterview')
           }
         }, err => {
           console.log(err)

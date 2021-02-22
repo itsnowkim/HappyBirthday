@@ -9,15 +9,12 @@
 
       <v-navigation-drawer app v-model="drawer">
         <v-list nav dense>
-          <v-list-item-group v-model="group">
+          <v-list-item-group v-model="group" class="text-center">
             <v-list-item to="/photo">
               <v-list-item-title>PHOTO</v-list-item-title>
             </v-list-item>
             <v-list-item to="/letter">
               <v-list-item-title>LETTER</v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/learnmore">
-              <v-list-item-title>LEARN MORE</v-list-item-title>
             </v-list-item>
           </v-list-item-group>
         </v-list>
@@ -29,7 +26,6 @@
       <v-btn icon to="/"><v-icon>mdi-cake</v-icon></v-btn>
       <v-btn text to="/photo">Photo</v-btn>
       <v-btn text to="/letter">Letter</v-btn>
-      <v-btn text to="/learnmore">Learn more</v-btn>
     </v-row>
 
     </v-app-bar>

@@ -10,7 +10,7 @@
               <v-sheet color="white" class="mt-12">
                   <h1 class="display-2 font-weight-bold mb-3">광장동에서</h1>
                   <h3 class="headline font-weight-bold mb-3">20.03.03</h3>
-                  <p>{{letter}}</p>
+                  <p>abcdefg</p>
               </v-sheet>
             </v-layout>
           </v-col>
@@ -45,7 +45,7 @@
               <v-sheet color="#f2f2f2" class="mt-12">
                   <h1 class="display-2 font-weight-bold mb-3">광장동에서</h1>
                   <h3 class="headline font-weight-bold mb-3">20.03.03</h3>
-                  <p>{{letter}}</p>
+                  <p>abcdefg</p>
               </v-sheet>
             </v-layout>
           </v-col>
@@ -65,11 +65,7 @@ export default {
         { src: require('@/assets/hbd.png') },
         { src: require('@/assets/present.jpg') },
         { src: require('@/assets/presento.png') }
-      ],
-      // eslint-disable-next-line quotes
-      letter: `aesrf
-      faewoihfe
-      aowefhie`
+      ]
     }
   },
   computed: {
